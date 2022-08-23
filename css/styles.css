@@ -11,10 +11,14 @@
 
 :root {
     --main-color: #596D48;
+    --secondary-color: #f8f9fa;
+    --tertiary-color: #212529;
+    font-size: 16px;
 }
 
 body {
     font-family: sans-serif;
+    max-width: 90rem;
 }
 
 main {
@@ -22,14 +26,50 @@ main {
         
     display: grid;
     grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+form {
+    color: var(--tertiary-color);
+    padding: 16px 0 0 0;
+}
+
+form > div {
+    width: 26.56rem;
+    margin-top: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+label {
+    text-transform: uppercase;
+    display: block;
+    font-size: 0.75rem;
+}
+
+input {
+    appearance: none;
+    padding: 0.25rem;
+    border: 0.06rem solid #E5E7EB;
+    margin-bottom: 1rem;
+}
+
+form,
+.sec-one,
+.sec-two {
+    padding-left: 2rem;
 }
 
 aside {
-    color: #f8f9fa;
+    color: var(--secondary-color);
     grid-row: 1 / 4;
     background-image: url(../img/halie-west-25xggax4bSA-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: local;
+    
 
     display: flex;
     flex-direction: column;
@@ -37,24 +77,78 @@ aside {
     align-items: center;
 }
 
+aside p {
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
 .lg-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px;
+    padding: 0.5rem;
     background-color: rgba(0, 0, 0, 0.6);
     
     width: 100%;
-    margin-top: 150px;
+    margin-top: 9.37rem;
 }
 
 .logo {
-    width: 47.5px;
-    height: 63.5px;
+    width:  2.96rem;
+    height: 3.96rem;
 }
 
 .lg-text {
-    font-size: 48px;
+    font-size: 3rem;
     font-family: norse, sans-serif;
 
+}
+
+.auth,.host {
+    color: var(--secondary-color);
+}
+
+/* sec-one */
+.sec-one {
+    font-weight: bold;
+    padding-top: 6.87rem;
+    padding-bottom: 2rem;
+    color: black;
+    background-color: var(--secondary-color);
+}
+
+.sec-one  p:first-child {
+    margin-bottom: 1rem;
+    width: 31.03rem;
+}
+
+.sec-two {
+    padding-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: var(--secondary-color);
+
+}
+
+button {
+    appearance: none;
+    padding: 0.5rem 2rem;
+    font-weight: bold;
+    border: 0.06rem solid var(--secondary-color);
+    border-radius: 0.31rem;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+
+.sec-two p  {
+    font-size: 0.75rem;
+}
+
+.sec-two p a {
+    color: var(--main-color);
+    font-weight: bold;
+    text-decoration: none;
 }
